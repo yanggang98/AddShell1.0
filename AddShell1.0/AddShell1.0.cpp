@@ -232,14 +232,14 @@ BOOL __declspec(naked) resolve()
         add edi, eax
         lab1 :
         mov al, byte ptr[edi]
-            not al
-            mov byte ptr[edi], al
-            inc edi
-            inc ecx
-            cmp  ecx, ebx
-            jb   lab1
-            popfd
-            popad
+        not al
+        mov byte ptr[edi], al
+        inc edi
+        inc ecx
+        cmp  ecx, ebx
+        jb   lab1
+        popfd
+        popad
     }
 }
 
